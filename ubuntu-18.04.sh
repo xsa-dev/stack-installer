@@ -48,7 +48,8 @@ cd
 sudo apt-get install wget ca-certificates
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add - && sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 sudo apt-get update -y
-sudo apt-get install -y postgresql postgresql-contrib python-psycopg2 libpq-dev
+pip3 install psycopg2
+sudo apt-get install -y postgresql postgresql-contrib libpq-dev
 
 # install pip packages
 pip install -r https://raw.githubusercontent.com/jesse-ai/jesse/master/requirements.txt
